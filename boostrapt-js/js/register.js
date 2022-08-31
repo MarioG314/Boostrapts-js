@@ -33,7 +33,7 @@ function checkReg(){
 
         if (userExist.length === 0){
             if (pass === checkPass){
-            array.push({id: localSTG.length + 1,user,pass,role:'admin'})
+            array.push({id: localSTG.length + 1,user,pass,role:'user'})
             localStorage.setItem('usuario',JSON.stringify(array))
             console.log(array)            
             }

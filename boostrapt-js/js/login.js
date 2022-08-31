@@ -7,12 +7,14 @@ function log () {
 
     if (userExist.length > 0) {
         if(userExist[0].pass === pass){
+            localStorage.setItem('id',JSON.stringify(userExist[0].id))
             setTimeout( ()=> {
             userExist[0].role === 'admin' 
             ?
             location.href= './homeAdmin.html'
             :
             location.href='./homeUser.html'
-        },2000)
+        },2000);
+    }
     }
 }
