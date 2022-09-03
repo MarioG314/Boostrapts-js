@@ -1,20 +1,7 @@
-//metodo alternativo
-
-// let buttonReg = document.getElementById('buttonReg').addEventListener('click', ()=> {
-//     let user = document.getElementById('user').value
-//     let pass = document.getElementById('pass').value
-//     let checkPass = docuemnt.getElementById('checkPass').value
-
-//     console.log(user)
-//     console.log(pass)
-//     console.log(checkPass)
-// })
-
 function checkReg(){
     let user = document.getElementById('user').value
     let pass = document.getElementById('pass').value
     let checkPass = document.getElementById('checkPass').value
-    
     let localSTG = JSON.parse(localStorage.getItem('usuario'))||[]
 
     const array = []
@@ -33,7 +20,7 @@ function checkReg(){
 
         if (userExist.length === 0){
             if (pass === checkPass){
-            array.push({id: localSTG.length + 1,user,pass,role:'user'})
+            array.push({id: localSTG.length + 1,user,pass,role:'admin'})
             localStorage.setItem('usuario',JSON.stringify(array))
             console.log(array)            
             }
